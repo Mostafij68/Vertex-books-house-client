@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+/* vc= Vanilla Css */
+/* container */
+.vc-container{
+  width: 90% !important;
+  margin: 0 auto !important;
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* bg-color */
+.vc-bg1{
+  background: #e73e3a !important;
+}
+.vc-bg2{
+  background: #333 !important;
+}
+/* text-color */
+.vc-text1{
+  color: #e73e3a !important;
+}
+.vc-text2{
+  color: #333 !important;
+}

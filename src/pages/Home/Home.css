@@ -1,0 +1,36 @@
+.banner{
+    /* background-size: cover; */
+    /* background-attachment: fixed; */
+    position: relative;
+    height: 88vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.banner-text{
+    position: absolute;
+    color: #e1e1e1;
+}
+.banner-text span{
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+
+/* ---------------
+responsive mobile 
+------------------*/
+@media only screen and (max-width: 364px){
+    .banner-text span{
+        font-size: 2.5rem;
+    }
+}
