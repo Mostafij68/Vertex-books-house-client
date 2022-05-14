@@ -1,6 +1,5 @@
 [
     {
-      "_id": 1,
       "price": "$18.99",
       "img": "https://storage.googleapis.com/circlesoft/document/photos/003/674/882/large_temp_img.jpg20220505-1-1xlegw3?1651786875",
       "name": "The Ice Dragon",
@@ -11,7 +10,6 @@
       "quantity": "5"
     },
     {
-      "_id": 2,
       "price": "$31.50",
       "img": "https://storage.googleapis.com/circlesoft/document/photos/003/719/612/large_temp_img.jpg20220416-1-1wde57a?1650099774",
       "name": "The Dance Tree",
@@ -22,7 +20,6 @@
       "quantity": "10"
     },
     {
-      "_id": 3,
       "price": "$32.99",
       "img": "https://storage.googleapis.com/circlesoft/document/photos/003/709/816/large_9781509835324.jpg?1649465320",
       "name": "The Kaiju Preservation Society",
@@ -33,7 +30,6 @@
       "quantity": "12"
     },
     {
-      "_id": 4,
       "price": "$49.99",
       "img": "https://storage.googleapis.com/circlesoft/document/photos/003/597/693/large_9781864708943.jpg?1619745098",
       "name": "Architecture Is Fun",
@@ -44,7 +40,6 @@
       "quantity": "9"
     },
     {
-      "_id": 5,
       "price": "$34.99",
       "img": "https://storage.googleapis.com/circlesoft/document/photos/003/712/324/large_9781761103513.jpg?1652312774",
       "name": "Bedtime Story",
@@ -55,7 +50,6 @@
       "quantity": "7"
     },
     {
-      "_id": 6,
       "price": "$90.00",
       "img": "https://storage.googleapis.com/circlesoft/document/photos/003/693/704/large_temp_img.jpg20220125-1-q8eami?1643084844",
       "name": "Treehouses for Adults",

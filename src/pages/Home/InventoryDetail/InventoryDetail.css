@@ -1,0 +1,44 @@
+.detail{
+    background: #fff;
+}
+.detail-img {
+    width: 40%;
+    text-align: center;
+}
+.detail-img div{
+    border: 1px solid #e73e3a;
+    padding: 45px 0;
+    margin: 0 65px;
+}
+.detail-img img{
+    width: 260px;
+    height: 420px;
+    transition: .3s ease-out;
+}
+.detail-img:hover.detail-img img{
+    transform: scale(1.2);
+}
+
+.detail-info{
+    width: 60%;
+    padding-left: 30px;
+}
+.detail-info h2{
+    font-size: 40px;
+}
+.d-description{
+    font-size: 20px;
+    color: #6c757d;
+}
+.detail-info ul{
+    list-style: none;
+    padding: 0;
+}
+.detail-info ul li{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 8px 0;
+}
+.detail-info ul li span{
+    font-size: 25px;
+}

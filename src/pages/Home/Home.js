@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
 import banner from './../../images/banner.jpg';
-import useProducts from '../hooks/useProducts';
+import useProducts from '../../hooks/useProducts';
 import Inventory from './Inventory/Inventory';
 
 const Home = () => {
