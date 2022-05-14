@@ -1,11 +1,14 @@
 import React from 'react';
 import './Home.css';
 import banner from './../../images/banner.jpg';
+import useProducts from '../hooks/useProducts';
+import Inventory from './Inventory/Inventory';
 
 const Home = () => {
+    const [products, setProducts] = useProducts([]);
     return (
         <div>
-            <div className="banner text-center">
+            <section className="banner text-center">
                 <div className="banner-text">
                     <div className="container">
                         <div className="row">
@@ -18,7 +21,16 @@ const Home = () => {
                     </div>
                 </div>
                 <img className='w-100 h-100' src={banner} alt="" />
-            </div>
+            </section>
+            <section className='vc-container py-5'>
+                <h1 className='mb-5 vc-text2 vc-h1 text-center'>Inventory Items</h1>
+                <div className="inventory">
+                    {
+                        products.map(product => <Inventory key={product._id} product={product}></Inventory>)
+                    }
+                </div>
+
+            </section>
         </div>
     );
 };

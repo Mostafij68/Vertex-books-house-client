@@ -1,3 +1,4 @@
+
 .banner{
     /* background-size: cover; */
     /* background-attachment: fixed; */
@@ -15,7 +16,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.75);
 }
 .banner-text{
     position: absolute;
@@ -26,9 +27,38 @@
     font-weight: 500;
 }
 
+.inventory{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+}
+
+
+/* ---------------
+responsive tablet 
+------------------*/
+@media only screen and (max-width: 1200px){
+    .inventory{
+        grid-gap: 40px;
+    }
+}
+
+@media only screen and (max-width: 992px){
+    .inventory{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 60px;
+    }
+}
+
 /* ---------------
 responsive mobile 
 ------------------*/
+@media only screen and (max-width: 600px){
+    .inventory{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 40px;
+    }
+}
 @media only screen and (max-width: 364px){
     .banner-text span{
         font-size: 2.5rem;

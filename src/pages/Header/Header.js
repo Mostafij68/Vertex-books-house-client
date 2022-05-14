@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <header>
             <nav className="navbar navbar-expand-lg navbar-light bg-white">
-                <div className="vc-container">
+                <div className="vc-nav-container">
                     <a className="navbar-brand d-flex align-items-center vc-navbar-brand" href="/">
                         <img width={30} src={logo} alt="" />
                         <span className='fs-2 vc-text2 vc-bold500'>Vertex Books House</span>
