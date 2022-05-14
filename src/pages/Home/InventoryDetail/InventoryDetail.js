@@ -1,27 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import useProductDetail from '../../../hooks/useProductDetail';
 import './InventoryDetail.css';
 
 const InventoryDetail = () => {
+    const [restock, setRestock] = useState(0);
     const { id } = useParams();
     const [product] = useProductDetail(id);
     const { name, _id, price, img, author, description, publisher, publish, quantity } = product;
 
-    const handleDelivered = quantity => {
-        const reduce = quantity - 1;
+    const handleRestockBlur = event =>{
+        setRestock(event.target.value)
+    };
+
+    const handleRestock = quantity => {
+        const number = parseInt(quantity) + parseInt(restock);
         const url = `http://localhost:5000/inventory/${_id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
-                'content-type' : 'application/json'
+                'content-type': 'application/json'
             },
-            body: JSON.stringify({reduce})
+            body: JSON.stringify({ number })
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+    };
+
+    const handleDelivered = quantity => {
+        const number = quantity - 1;
+        const url = `http://localhost:5000/inventory/${_id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({ number })
         })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
     };
 
     return (
@@ -46,12 +67,25 @@ const InventoryDetail = () => {
                                 <li><i class="fa-solid fa-angles-right me-2 vc-text1"></i>Price : <span>{price}</span></li>
                             </ul>
                             <div className="inventory-btn mt-5 mb-0">
-                                <button onClick={()=>handleDelivered(quantity)}>Delivered</button>
+                                <button onClick={() => handleDelivered(quantity)}>Delivered</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="col-xl-0"></div>
+            </div>
+            <div className="row">
+                <div className="col-lg-3"></div>
+                <div className="col-lg-6 restock text-center">
+                    <h2 className='vc-text2 vc-h1 mb-4'>Restock the items</h2>
+                    <form className='restock-form'>
+                        <input onBlur={handleRestockBlur} className='w-100' placeholder='Enter amount' type="number" name="number" />
+                    </form>
+                    <div className="inventory-btn mt-5 mb-0">
+                        <button onClick={()=> handleRestock(quantity)}>Restock</button>
+                    </div>
+                </div>
+                <div className="col-lg-3"></div>
             </div>
         </div>
     );

@@ -42,3 +42,15 @@
 .detail-info ul li span{
     font-size: 25px;
 }
+
+
+.restock{
+    background: #fdebeb;
+    padding: 50px;
+}
+
+.restock-form input{
+    border: none;
+    padding: 12px 14px;
+    margin-bottom: 20px;
+}
