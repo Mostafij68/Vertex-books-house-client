@@ -2,8 +2,17 @@ import React from 'react';
 import './Header.css';
 import logo from './../../../images/logo.png'
 import { Link } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import { signOut } from 'firebase/auth';
 
 const Header = () => {
+    const [user] = useAuthState(auth);
+
+    const handleLogout = () =>{
+        signOut(auth)
+    };
+
     return (
         <header>
             <nav className="navbar navbar-expand-lg navbar-light bg-white">
@@ -17,15 +26,32 @@ const Header = () => {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
+                            <li className="nav-item me-2">
                                 <Link className='nav-link vc-nav-link' to='/'>Home</Link>
                             </li>
-                            <li className="nav-item">
-                                <Link className='nav-link vc-nav-link' to='/manageInventory'>Manage</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className='nav-link vc-nav-link' to='/addItem'>Add</Link>
-                            </li>
+                            {
+                                user ? 
+                                <>
+                                    <li className="nav-item me-2">
+                                        <Link className='nav-link vc-nav-link' to='/manageInventory'>Manage</Link>
+                                    </li>
+                                    <li className="nav-item me-2">
+                                        <Link className='nav-link vc-nav-link' to='/addItem'>Add</Link>
+                                    </li>
+                                    <li className="nav-item me-2">
+                                        <button className='btn nav-link vc-nav-link' onClick={handleLogout}>Log Out</button>
+                                    </li>
+                                </>
+                                :
+                                <>
+                                    <li className="nav-item me-2">
+                                        <Link className='nav-link vc-nav-link' to='/login'>Login</Link>
+                                    </li>
+                                    <li className="nav-item me-2">
+                                        <Link className='nav-link vc-nav-link' to='/register'>Register</Link>
+                                    </li>
+                                </>
+                            }
                         </ul>
                     </div>
                 </div>
