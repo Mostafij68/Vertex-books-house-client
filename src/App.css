@@ -55,14 +55,14 @@
   background: #e73e3a !important;
 }
 .vc-bg2{
-  background: #333 !important;
+  background: #0B0D17 !important;
 }
 /* text-color */
 .vc-text1{
   color: rgb(231, 62, 58) !important;
 }
 .vc-text2{
-  color: #333 !important;
+  color: #0B0D17 !important;
 }
 .vc-shadow {
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
@@ -74,4 +74,13 @@
 
 .vc-h1{
   font-size: 50px;
+}
+
+/* ---------------
+responsive mobile 
+------------------*/
+@media only screen and (max-width: 450px){
+  .vc-h1{
+    font-size: 35px;
+  }
 }

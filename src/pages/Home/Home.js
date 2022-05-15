@@ -3,9 +3,19 @@ import './Home.css';
 import banner from './../../images/banner.jpg';
 import useProducts from '../../hooks/useProducts';
 import Inventory from './Inventory/Inventory';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
     const [products, setProducts] = useProducts([]);
+
+    const products6 = products.slice(0,6);
+
+    const navigate = useNavigate();
+
+    const handleManageInventories = () => {
+        navigate('/manageInventory')
+    };
+
     return (
         <div>
             <section className="banner text-center">
@@ -22,14 +32,16 @@ const Home = () => {
                 </div>
                 <img className='w-100 h-100' src={banner} alt="" />
             </section>
-            <section className='vc-container py-5'>
+            <section className='vc-container pt-5'>
                 <h1 className='mb-5 vc-text2 vc-h1 text-center'>Inventory Items</h1>
                 <div className="inventory">
                     {
-                        products.map(product => <Inventory key={product._id} product={product}></Inventory>)
+                        products6.map(product => <Inventory key={product._id} product={product}></Inventory>)
                     }
                 </div>
-
+                <div className='d-block text-center inventory-btn mt-5 pt-4'>
+                    <button onClick={()=> handleManageInventories()}>Manage Inventories</button>
+                </div>
             </section>
         </div>
     );

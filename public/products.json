@@ -58,5 +58,45 @@
       "publisher": "Rizzoli International Publications, Incorporated",
       "publish": "March 2022",
       "quantity": "15"
+    },
+    {
+      "price": "$32.99",
+      "img": "https://storage.googleapis.com/circlesoft/document/photos/003/720/370/large_9781529074505.jpg?1649637261",
+      "name": "Trust",
+      "description": "Even through the roar of the 1920s, everyone in New York has heard of Benjamin and Helen Rask. He is a legendary Wall Street tycoon; she is the brilliant daughter of eccentric aristocrats. Together, they have risen to the very top of a world of seemingly endless wealth. But the secrets around their affluence and grandeur excite gossip.",
+      "author": "Hernan Diaz, Hernán Diaz",
+      "publisher": "Pan Macmillan",
+      "publish": "February 2022",
+      "quantity": "10"
+    },
+    {
+      "price": "$32.99",
+      "img": "https://storage.googleapis.com/circlesoft/document/photos/003/712/894/large_9781761065996.jpg?1650285851",
+      "name": "Rattled",
+      "description": "What if your life were suddenly transformed by anxiety and fear? The fear of being alone, the anxiety compelling you to stay in public places and avoid predictable routines. The horrible uncertainty of not knowing whether you should fear for your life, and maybe even the lives of your children. The dreadful knowledge that, ultimately, you are powerless to escape.",
+      "author": "Ellis Gunn",
+      "publisher": "Allen & Unwin",
+      "publish": "April 2022",
+      "quantity": "9"
+    },
+    {
+      "price": "$39.95",
+      "img": "https://storage.googleapis.com/circlesoft/document/photos/002/291/338/large_9780714848587.jpg?1649126289",
+      "name": "Earthsong",
+      "description": "'Earthsong' comprises a spectacular collection of breathtaking aerial photographs of the earth's surface, taken from all over the world. This book offers a mesmerizing perspective of the world in which we live, but which we rarely get to glimpse so completely. These images reveal wide stretches of the earth's surface that are untouched by human influence, where nature reigns, and natural phenomena dominate and define the landscape.",
+      "author": "Angelika Jung-Huttl",
+      "publisher": "Phaidon Press Limited",
+      "publish": "March 2008",
+      "quantity": "5"
+    },
+    {
+      "price": "$32.99",
+      "img": "https://storage.googleapis.com/circlesoft/document/photos/003/698/593/large_temp_img.jpg20220322-1-suhq7i?1647985984",
+      "name": "Trust & Inspire",
+      "description": "Traditionally, businesses have relied on a 'command and control' management style, focusing on rigid hierarchies and compliance from employees. Covey argues we must shift from a 'command and control' to a 'trust and inspire' leadership model. Trusting and inspiring your team is defined by commitment from both sides, with a focus on effectiveness and fostering a growth mindset.",
+      "author": "Stephen M. R. Covey",
+      "publisher": "Harper Entertainment Distribution Services",
+      "publish": "April 2022",
+      "quantity": "4"
     }
   ]

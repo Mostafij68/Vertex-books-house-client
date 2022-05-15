@@ -89,10 +89,11 @@ responsive mobile
 ------------------*/
 @media only screen and (max-width: 600px){
     .inventory-items{
-        height: 45rem;
+        height: auto;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        padding-bottom: 30px;
     }
     .inventory-items img{
         height: 250px !important;
