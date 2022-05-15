@@ -22,7 +22,7 @@ const Inventory = (props) => {
                     <p className='vc-text1 author my-2'> <span></span> {author}</p>
                     <div>
                         <p className='fw-bold m-0'>Quantity: <span className='vc-text'>{quantity}</span></p>
-                        <p className='fw-bold m-0'>Price: <span className='vc-text'>{price}</span></p>
+                        <p className='fw-bold m-0'>Price: <span className='vc-text'>${price}</span></p>
                     </div>
                 </div>
             </div>

@@ -1,23 +1,28 @@
 import React, { useState } from 'react';
 import useProducts from '../../hooks/useProducts';
 import './ManageInventory.css';
+import { useNavigate } from 'react-router-dom';
 
 const ManageInventory = () => {
     const [products, setProducts] = useProducts([]);
+    const navigate = useNavigate();
+
+    const handleAddItem = () =>{
+        navigate('/addItem')
+    };
 
     const handleRemoveItems = _id => {
         const url = `http://localhost:5000/inventory/${_id}`;
         fetch(url, {
             method: 'DELETE'
         })
-        .then(res => res.json())
-        .then(data => {
-            if(data.deletedCount > 0){
-                console.log('deleted');
-                const remaining = products.filter(product => product._id !== _id);
-                setProducts(remaining);
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    const remaining = products.filter(product => product._id !== _id);
+                    setProducts(remaining);
+                }
+            })
     };
 
     return (
@@ -37,7 +42,7 @@ const ManageInventory = () => {
                                     <p className='vc-text1 author my-2'> <span></span> {product.author}</p>
                                     <div>
                                         <p className='fw-bold m-0'>Quantity: <span className='vc-text'>{product.quantity}</span></p>
-                                        <p className='fw-bold m-0'>Price: <span className='vc-text'>{product.price}</span></p>
+                                        <p className='fw-bold m-0'>Price: <span className='vc-text'>${product.price}</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -46,6 +51,9 @@ const ManageInventory = () => {
                             </div>
                         </div>)
                     }
+                </div>
+                <div className="inventory-btn mt-5 pt-5 text-center">
+                    <button onClick={() => handleAddItem()}>Add New Item</button>
                 </div>
             </section>
         </div>
