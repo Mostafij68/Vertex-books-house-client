@@ -29,6 +29,9 @@ const Header = () => {
                             <li className="nav-item me-2">
                                 <Link className='nav-link vc-nav-link' to='/'>Home</Link>
                             </li>
+                            <li className="nav-item me-2">
+                                <Link className='nav-link vc-nav-link' to='/blogs'>Blogs</Link>
+                            </li>
                             {
                                 user ? 
                                 <>

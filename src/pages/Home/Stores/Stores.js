@@ -10,7 +10,7 @@ const Stores = () => {
     }, []);
     return (
         <div className='vc-container py-5'>
-            <h1 className='pt-5'>Our Stores</h1>
+            <h1 className='pt-5 text-center'>Our Stores</h1>
             <div className="row">
                 {
                     photos.map(photo => <div className='col-lg-4 col-md-6 col-sm-6 g-5' key={photo._id}>
