@@ -9,7 +9,7 @@ const MyItems = () => {
     console.log(myItems)
     useEffect(() => {
         const email = user?.email;
-        const url = `http://localhost:5000/items?email=${email}`;
+        const url = `https://nameless-plateau-90058.herokuapp.com/items?email=${email}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setMyItems(data));
@@ -18,7 +18,7 @@ const MyItems = () => {
     const handleRemoveItems = _id => {
         const confirm = window.confirm('Are you sure?')
         if (confirm) {
-            const url = `http://localhost:5000/inventory/${_id}`;
+            const url = `https://nameless-plateau-90058.herokuapp.com/inventory/${_id}`;
             fetch(url, {
                 method: 'DELETE'
             })

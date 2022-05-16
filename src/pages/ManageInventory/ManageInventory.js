@@ -15,7 +15,7 @@ const ManageInventory = () => {
     const handleRemoveItems = _id => {
         const confirm = window.confirm('Are you sure?')
         if (confirm) {
-            const url = `http://localhost:5000/inventory/${_id}`;
+            const url = `https://nameless-plateau-90058.herokuapp.com/inventory/${_id}`;
             fetch(url, {
                 method: 'DELETE'
             })

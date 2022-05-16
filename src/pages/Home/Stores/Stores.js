@@ -4,7 +4,7 @@ import './Stores.css';
 const Stores = () => {
     const [photos, setPhotos] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/photos')
+        fetch('https://nameless-plateau-90058.herokuapp.com/photos')
             .then(res => res.json())
             .then(data => setPhotos(data))
     }, []);

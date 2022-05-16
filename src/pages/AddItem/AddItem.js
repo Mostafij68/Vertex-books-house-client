@@ -16,9 +16,9 @@ const AddItem = () => {
         const publish = event.target.publish.value;
         const description = event.target.description.value;
         const quantity = event.target.quantity.value;
-        const addItem = {name, price, img, author, publisher, publish, description, quantity, email};
+        const addItem = {price, img, name, description, author, publisher, publish, quantity, email};
 
-        fetch('http://localhost:5000/items', {
+        fetch('https://nameless-plateau-90058.herokuapp.com/items', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

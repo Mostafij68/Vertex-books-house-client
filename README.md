@@ -1,10 +1,16 @@
-# Getting Started with Create React App
+# Vertex Books House
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Here live link](https://vertext-books-house.web.app/manageInventory).
 
-## Available Scripts
+## Project summary
 
-In the project directory, you can run:
+1. Vertex Books House is a books warehouse site which is built by React libraries.
+2. In this project, Google Firebase authentication is included that identifies a user and saves user data securely.
+3. Also included React Router and protected Route.
+4. This project designed by Vanilla CSS and Bootstrap-5.
+5. Back-end site covered by Node.js and MongoDB.
+6. There are many stored books and few article on the blog page. In the add page user can store books and manage page user can delete stored book. ALso user can increase or delivere stored book on the inventory/:id page.
+7. This website is fully responsive. You can view it on Mobile, Tablet and Computer.
 
 ### `npm start`
 
