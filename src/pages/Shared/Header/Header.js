@@ -25,7 +25,7 @@ const Header = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-                        <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <ul className="navbar-nav ms-auto text-center mb-2 mb-lg-0">
                             <li className="nav-item me-2">
                                 <Link className='nav-link vc-nav-link' to='/'>Home</Link>
                             </li>
@@ -45,7 +45,7 @@ const Header = () => {
                                         <Link className='nav-link vc-nav-link' to='/myItems'>My items</Link>
                                     </li>
                                     <li className="nav-item me-2">
-                                        <button className='btn nav-link vc-nav-link' onClick={handleLogout}>Log Out</button>
+                                        <button className='btn w-100 nav-link vc-nav-link' onClick={handleLogout}>Log Out</button>
                                     </li>
                                 </>
                                 :

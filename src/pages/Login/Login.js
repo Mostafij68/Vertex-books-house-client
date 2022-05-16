@@ -42,7 +42,7 @@ const Login = () => {
 
     return (
         <div className='vc-container'>
-            <div className="row pt-5">
+            <div className="row m-0 pt-5">
                 <div className="col-lg-3 col-md-2 col-sm-0"></div>
                 <div className="col-lg-6 col-md-8 col-sm-12 restock text-center">
                     <h2 className='vc-text2 vc-h1 mb-4'>Login</h2>

@@ -15,11 +15,11 @@ const Contact = () => {
                 <div className="col-lg-2 col-md-1 col-sm-0"></div>
                 <div className="col-lg-8 col-md-10 col-sm-12 restock shadow">
                     <form onSubmit={handleContact} className='restock-form py-4'>
-                        <div className='d-flex justify-content-between'>
-                            <div style={{'width' : '48%'}}>
+                        <div className='input-group'>
+                            <div className='contact-input'>
                                 <input className='w-100 ' placeholder='Your Name' type="text" name="name" />
                             </div>
-                            <div style={{'width' : '48%'}}>
+                            <div className='contact-input'>
                                 <input className='w-100 ' placeholder='Your email' type="email" name="email" required/>
                             </div>
                         </div>

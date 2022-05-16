@@ -11,10 +11,10 @@ const Stores = () => {
     return (
         <div className='vc-container py-5'>
             <h1 className='pt-5 text-center'>Our Stores</h1>
-            <div className="row">
+            <div className="row m-0">
                 {
                     photos.map(photo => <div className='col-lg-4 col-md-6 col-sm-6 g-5' key={photo._id}>
-                        <div className="store shadow">
+                        <div className="store text-center shadow">
                             <img src={photo.photo} alt="" />
                         </div>
                     </div>)
