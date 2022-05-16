@@ -5,13 +5,14 @@ import auth from '../../firebase.init';
 import SocialLogin from '../Login/SocialLogin';
 import Spinner from '../Shared/Spinner/Spinner';
 
+
 const Register = () => {
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
       const [updateProfile, updating, updateError] = useUpdateProfile(auth);
       const navigate = useNavigate();
 

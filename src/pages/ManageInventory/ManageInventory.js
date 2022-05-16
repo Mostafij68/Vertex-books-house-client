@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useProducts from '../../hooks/useProducts';
 import './ManageInventory.css';
 import { useNavigate } from 'react-router-dom';
+import Spinner from '../Shared/Spinner/Spinner';
 
 const ManageInventory = () => {
     const [products, setProducts] = useProducts([]);
@@ -32,6 +33,7 @@ const ManageInventory = () => {
         <div>
             <section className='vc-container pt-5'>
                 <h1 className='mb-5 vc-text2 vc-h1 text-center'>Manage Inventory Items</h1>
+                { !products ? <Spinner></Spinner> : ''}
                 <div className="inventory">
                     {
                         products.map(product => <div key={product._id} className='inventory-info'>

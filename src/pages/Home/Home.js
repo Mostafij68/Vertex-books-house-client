@@ -6,6 +6,7 @@ import Inventory from './Inventory/Inventory';
 import { useNavigate } from 'react-router-dom';
 import Stores from './Stores/Stores';
 import Contact from './Contact/Contact';
+import Spinner from '../Shared/Spinner/Spinner';
 
 const Home = () => {
     const [products, setProducts] = useProducts([]);
@@ -36,6 +37,7 @@ const Home = () => {
             </section>
             <section className='vc-container pt-5'>
                 <h1 className='mb-5 vc-text2 vc-h1 text-center'>Inventory Items</h1>
+                { !products ? <Spinner></Spinner> : ''}
                 <div className="inventory">
                     {
                         products6.map(product => <Inventory key={product._id} product={product}></Inventory>)
