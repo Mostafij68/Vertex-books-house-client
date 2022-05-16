@@ -1,9 +1,13 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 import './AddItem.css';
 
 const AddItem = () => {
+    const [user] = useAuthState(auth);
     const handleAddNewItem = event =>{
         event.preventDefault();
+        const email = user?.email;
         const name = event.target.name.value;
         const price = event.target.price.value;
         const img = event.target.img.value;
@@ -12,9 +16,9 @@ const AddItem = () => {
         const publish = event.target.publish.value;
         const description = event.target.description.value;
         const quantity = event.target.quantity.value;
-        const addItem = {name, price, img, author, publisher, publish, description, quantity};
+        const addItem = {name, price, img, author, publisher, publish, description, quantity, email};
 
-        fetch('http://localhost:5000/inventory', {
+        fetch('http://localhost:5000/items', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

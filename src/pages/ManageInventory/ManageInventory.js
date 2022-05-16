@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import useProducts from '../../hooks/useProducts';
 import './ManageInventory.css';
 import { useNavigate } from 'react-router-dom';
@@ -7,22 +7,25 @@ const ManageInventory = () => {
     const [products, setProducts] = useProducts([]);
     const navigate = useNavigate();
 
-    const handleAddItem = () =>{
+    const handleAddItem = () => {
         navigate('/addItem')
     };
 
     const handleRemoveItems = _id => {
-        const url = `http://localhost:5000/inventory/${_id}`;
-        fetch(url, {
-            method: 'DELETE'
-        })
+        const confirm = window.confirm('Are you sure?')
+        if (confirm) {
+            const url = `http://localhost:5000/inventory/${_id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
             .then(res => res.json())
             .then(data => {
                 if (data.deletedCount > 0) {
                     const remaining = products.filter(product => product._id !== _id);
                     setProducts(remaining);
                 }
-            })
+            });
+        };
     };
 
     return (

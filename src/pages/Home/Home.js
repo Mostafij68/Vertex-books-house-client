@@ -4,6 +4,8 @@ import banner from './../../images/banner.jpg';
 import useProducts from '../../hooks/useProducts';
 import Inventory from './Inventory/Inventory';
 import { useNavigate } from 'react-router-dom';
+import Stores from './Stores/Stores';
+import Contact from './Contact/Contact';
 
 const Home = () => {
     const [products, setProducts] = useProducts([]);
@@ -43,6 +45,8 @@ const Home = () => {
                     <button onClick={()=> handleManageInventories()}>Manage Inventories</button>
                 </div>
             </section>
+            <Stores></Stores>
+            <Contact></Contact>
         </div>
     );
 };

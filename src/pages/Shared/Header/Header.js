@@ -14,7 +14,7 @@ const Header = () => {
     };
 
     return (
-        <header>
+        <header className='sticky-top'>
             <nav className="navbar navbar-expand-lg navbar-light bg-white">
                 <div className="vc-nav-container">
                     <a className="navbar-brand d-flex align-items-center vc-navbar-brand" href="/">
@@ -37,6 +37,9 @@ const Header = () => {
                                     </li>
                                     <li className="nav-item me-2">
                                         <Link className='nav-link vc-nav-link' to='/addItem'>Add</Link>
+                                    </li>
+                                    <li className="nav-item me-2">
+                                        <Link className='nav-link vc-nav-link' to='/myItems'>My items</Link>
                                     </li>
                                     <li className="nav-item me-2">
                                         <button className='btn nav-link vc-nav-link' onClick={handleLogout}>Log Out</button>
